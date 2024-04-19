@@ -1,0 +1,411 @@
+/*Estilos Generales del html*/
+
+/*Fuentes seleccionadas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+
+@import url("https://use.typekit.net/qtd5ijo.css");
+
+
+
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;/*como va a calcular el tamaño del elemento, en el width y height que le demos va a incluir a las medidas de su margin y padding*/
+}
+
+:root {
+    --font:"Shadows Into Light", cursive;/*2 opcion*/
+    --font-comun: "Open Sans", sans-serif;/*comun*/
+    --font-glacial:"mundial", sans-serif;
+    --color-blanco:rgb(255, 255, 255);
+    --color-azul-intermedio:#6f7a89;
+    --color-azul-oscuro:#343b50;
+    --color-turquesa:rgb(69, 204, 204);
+    --color-sombra:rgb(40 36 36 /20%);/*Nueva forma de utilizar rgba*/
+}
+
+body {
+    font-family: var(--font-glacial);
+    background-color: var(--color-azul-intermedio); 
+    width: 100vw; /*esta unidad medida (vw)es lo que adaptable al ancho de cada dispositivo*/ 
+    color:var(--color-blanco); 
+    box-sizing: border-box;
+} 
+
+h2{
+   font-family: var(--font-comun);
+   font-size:30px; 
+   color: var(--color-blanco);
+   
+}
+
+h6{
+    text-align: end;
+    margin-top: 20px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+    
+}  
+
+.linea{
+    margin-left: 55px;
+    margin-right: 55px;
+    border-width: 70px;
+    border-top:3px solid var(--color-turquesa);
+    border-top-style: groove;
+   
+}
+
+
+/*CABECERA */
+header{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 10px 24px var(--color-sombra); 
+    /* width:100%;  */
+}
+
+.cabecera-container{ 
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--color-azul-intermedio);
+    height: 80px;
+    width: 100%; 
+    max-width:1000px ;
+    margin: 0 auto;
+}
+
+.logo-turquesa img{
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.menu-nav li{
+    display: inline;
+    margin-left: 20px;
+} 
+
+.menu-nav a{
+    text-transform: uppercase;
+    color: var(--color-blanco);
+    font-size: 18px;
+    text-decoration: none;/*ninguna decoración(saca subrayado)*/
+     cursor: pointer; 
+}
+
+a:hover{
+    background-color: var(--color-turquesa);
+    background: none;
+    color: var(--color-turquesa);
+    transform: scale(.9);
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+
+/* MAIN */
+#contenedor-sobre-mi{
+    display:flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 35px auto;
+} 
+
+/* En el contenedor padre se aplica el tipo de display(flex,grid,block,inline-block)- Dirección del contenido flex-direction (column, row)-Alineación verticalmente align-items(start.center,end)-Alineación horizontal justify-content(start,center,end,los space) */
+.nombre-foto{
+    display:flex;   
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction:row; 
+    font-family: var(--font);
+}
+
+.nombre{
+    font-size: 60px;
+    color: var(--color-turquesa);
+   align-self: center;
+}
+
+.imagen-foto{
+    width: 250px;
+    height: 250px;
+    border-radius: 150px 150px;
+}
+
+.presentacion{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid color var(--color-azul-oscuro);
+    width:90% ;
+    max-width: 1000px;
+    height:100% ;
+    padding: 30px; 
+    margin: 15px auto;
+    background-color: var(--color-azul-oscuro);
+    
+    p{
+     font-size:20px ;
+     text-align:center;
+     padding-top: 10px;
+     padding-bottom: 5px;
+     font-family: var(--font-glacial);
+    }
+}
+
+
+/* BOTONES */
+ .boton{
+    text-decoration: none;
+    color: var(--color-azul-claro);
+    font-family: var(--font-comun);
+    font-size: 13px;
+    margin-right: 40px; 
+}
+
+.boton a:hover{
+    background-color: var(--color-turquesa);
+    background: none;
+    color: var(--color-turquesa);
+    transform: scale(.9);
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+
+/* SECCION SKILLS */
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    list-style: none;/*saca los puntos de la lista
+    */
+    margin:25px;
+}
+
+.skills li{
+    width: 200px;
+    height: 120px;
+    border: 2px solid color var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+}
+
+.icono-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.icono-skills img{  
+    width:60px ;
+    height: 60px;
+}
+
+
+/* SECCIÓN HOBBIES */
+.hobbies{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 25px ;
+}
+
+.hobbies li{
+    width: 200px;
+    height: 120px;
+    border: 2px solid color var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+    list-style: none;/*saca los puntos de la lista
+    */
+}
+
+.icono-hobbies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.icono-hobbies img{ 
+    width:60px ;
+    height: 60px;
+}
+
+
+/* SECCIÓN FORMACION */
+.formacion{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 25px;
+}
+
+.formacion li{
+    width: 200px;
+    height: 120px;
+    border: 2px solid color var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+    list-style: none;/*saca los puntos de la lista
+    */
+}
+
+.icono-formacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.icono-formacion img{ 
+    width:60px ;
+    height: 60px;
+}
+img.udemy{
+    width: 90px;
+    height: 90px;
+}
+
+img.alura{
+    width: 75px;
+    height: 75px;
+}
+
+/* SECCIÒN PROYECTOS */
+.proyectos{ 
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px;
+}
+
+ .proyectos li{
+    width: 200px;
+    height: 120px;
+    border: 2px solid color var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+    list-style: none;/*saca los puntos de la lista*/
+    margin-bottom: 25px;
+}
+
+.img-proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.img-proyectos img{ 
+    width: 60px;
+    height: 60px;
+} 
+
+
+/* SECCIÓN CONTACTO */
+ .contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.contacto{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    width: 900px;
+    margin:25px;
+}
+
+.contacto li{
+    width: 350px;
+    height: 80px;
+    border: 2px solid color var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+    list-style: none;/*saca los puntos de la lista
+    */
+}
+
+.icono-contacto{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    text-align: end;
+}
+
+.icono-contacto img{
+    width:45px ;
+    height:45px;
+}
+
+.icono-contacto span{
+    font-size: 18px;
+}
+
+.icono-contacto i img:hover{
+    transform: scale(.9);
+    transition: 0.5s;
+}
+
+
+/* SECCIÓN FOOTER */
+.pie-de-pagina{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    height: 40px;
+    width: 100%;
+    margin: 20px auto; 
+} 
+
+img.logo-footer{
+    width: 35px;
+    height: 35px;
+}
+
+.pie-de-pagina a{
+    color: var(--color-blanco);
+    
+}
+
+.pie-de-pagina a:hover{
+    color: var(--color-turquesa);
+    transform: scale(.9);
+    transition: 0.5s;
+}
+
+footer p{
+   font-size: 13px;
+}
+
+
+
+
+
+
+
